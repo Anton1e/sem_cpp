@@ -1,11 +1,11 @@
 #include <iostream>
 #include "arithmetics.h"
 
-void Panic(int result_sum, int result_mul){
+void panic(int result_sum, int result_mul){
     std::cout << "Unexpected results" << " " << result_sum << " " << result_mul << "\n";
 }
 
-void PrintSuccess(){
+void printsuccess(){
     std::cout << "Ok!" << "\n";
 }
 
@@ -14,10 +14,10 @@ int main(){
     std::cin >> a >> b;
     int result_sum = sum(a, b), result_mul = mul(a, b);
     if (result_sum == a + b && result_mul == a * b){
-        PrintSuccess();
+        printsuccess();
     }
     else{
-        Panic(result_sum, result_mul);
+        panic(result_sum, result_mul);
     }
     return 0;
 }
